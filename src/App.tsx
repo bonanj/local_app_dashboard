@@ -112,8 +112,10 @@ export default function App() {
               <Globe className="w-4 h-4 opacity-20" />
             </div>
             <div className="mt-auto">
-              <p className="text-3xl font-mono font-bold tracking-tighter">127.0.0.1</p>
-              <p className="text-[10px] font-mono opacity-60">LOCAL_LOOPBACK_INTERFACE</p>
+              <p className="text-3xl font-mono font-bold tracking-tighter truncate" title={window.location.hostname}>
+                {window.location.hostname}
+              </p>
+              <p className="text-[10px] font-mono opacity-60">ACTIVE_INTERFACE</p>
             </div>
           </div>
 
@@ -183,12 +185,12 @@ export default function App() {
                     {result.open ? (result.title || 'Unknown Service') : '---'}
                   </div>
                   <div className="col-span-1 md:col-span-5 font-mono text-[11px] truncate opacity-60 group-hover:opacity-100">
-                    {result.open ? `http://localhost:${result.port}` : '---'}
+                    {result.open ? `http://${window.location.hostname}:${result.port}` : '---'}
                   </div>
                   <div className="col-span-1 text-right">
                     {result.open && (
                       <a 
-                        href={`http://localhost:${result.port}`}
+                        href={`http://${window.location.hostname}:${result.port}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-[10px] font-bold uppercase border-b border-[#141414] group-hover:border-[#E4E3E0] pb-0.5"

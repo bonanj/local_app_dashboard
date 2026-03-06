@@ -42,7 +42,7 @@ Start the development server:
 ```bash
 npm run dev
 ```
-The application will be available at `http://localhost:3000`.
+The application will be available at `http://localhost:3000`. If you are on the same network, you can access it using the server's IP address (e.g., `http://192.168.1.5:3000`). The launch links in the dashboard will automatically adapt to your connection method.
 
 ## 📝 Scripts
 
