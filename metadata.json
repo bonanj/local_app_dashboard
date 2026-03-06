@@ -1,0 +1,5 @@
+{
+  "name": "Local Port Explorer",
+  "description": "A dashboard to scan and monitor local ports 3000-3020, providing quick access to running services.",
+  "requestFramePermissions": []
+}
